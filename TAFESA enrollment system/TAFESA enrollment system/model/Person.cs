@@ -21,7 +21,8 @@ namespace TAFESA_enrollment_system
         public string phoneNumber { get; set; }
 
         //address
-        public Address address { get; private set; }
+        public Address address { get; set; }
+
 
         //constrcutors 
 
@@ -56,7 +57,7 @@ namespace TAFESA_enrollment_system
         /// </returns>
         public override string ToString()
         {
-            return "name: " + name + " email: " + email + " Phone Number: " + phoneNumber + "\nAddress: " + address.ToString();
+            return "name: " + name + ", email: " + email + ", Phone Number: " + phoneNumber + "\nAddress: " + address.ToString();
         }
     }
 }

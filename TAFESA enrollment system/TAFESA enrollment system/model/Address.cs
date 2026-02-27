@@ -59,8 +59,8 @@ namespace TAFESA_enrollment_system.model
         /// </returns>
         public override string ToString()
         {
-            return "Street Number: " + streetNumber + "Street Name: " + streetName + "Suburb: " + suburb 
-                + "Postcode: " + postcode + "State: " + state;
+            return "Street Number: " + streetNumber + ", Street Name: " + streetName + ", Suburb: " + suburb 
+                + ", Postcode: " + postcode + ", State: " + state;
         }
     }
 }

@@ -50,11 +50,12 @@ namespace TAFESA_enrollment_system.model
         /// tostring override for enrollment
         /// </summary>
         /// <returns>
-        /// retruns dateEnrolled, grade, semester, and subject information; subjectCode, subjectName, and cost
+        /// retruns dateEnrolled, grade, semester, and subject information; 
+        /// subjectCode, subjectName, and cost
         /// </returns>
         public override string ToString()
         {
-            return "Date Enrolled: " + dateEnrolled + "Grade: " + grade + "Semester: " 
+            return "Date Enrolled: " + dateEnrolled + ", Grade: " + grade + ", Semester: " 
                 + semester + "\nSubject: " + subject.ToString();
         }
     }

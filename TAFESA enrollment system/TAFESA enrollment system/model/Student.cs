@@ -67,7 +67,7 @@ namespace TAFESA_enrollment_system
         /// </returns>
         public override string ToString()
         {
-            return "studentID: " + studentID + "program: " + program + "Date Registered: " 
+            return "studentID: " + studentID + ", program: " + program + ", Date Registered: " 
                 + dateRegistered + "\nEnrollemnt: " + enrollment.ToString() + "\n" +base.ToString();
         }
 

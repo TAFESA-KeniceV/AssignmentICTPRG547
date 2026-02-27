@@ -49,7 +49,7 @@ namespace TAFESA_enrollment_system.model
         /// </returns>
         public override string ToString()
         {
-            return "Subject Code: " + subjectCode + "Subject Name: "+ subjectName + "Cost: " + cost;
+            return "Subject Code: " + subjectCode + ", Subject Name: "+ subjectName + ", Cost: " + cost;
         }
     }
 }
