@@ -1,0 +1,77 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using TAFESA_enrollment_system.model;
+
+namespace TAFESA_enrollment_system
+{
+    internal class Student : Person
+    {
+        //constants
+        const string DEF_ID = "0";
+        const string DEF_PROGRAM = "No program selected";
+        const string DEF_DATE_REG = "No date registered";  
+
+        //property assessor
+        public string studentID { get; set; }
+        public string program { get; set; }
+        public string dateRegistered { get; set; }
+
+        //enrollment
+        public Enrollment enrollment { get; set; }
+
+        //constrcutors
+
+        //all arg
+        /// <summary>
+        /// All arg constrcutor to Student class
+        /// </summary>
+        /// <param name="studentID"></param>
+        /// <param name="program"></param>
+        /// <param name="date"></param>
+        /// <param name="enrollment"></param>
+        /// <param name="name"></param>
+        /// <param name="email"></param>
+        /// <param name="phoneno"></param>
+        /// <param name="address"></param>
+        public Student(string studentID, string program, string date, Enrollment enrollment, string name, string email, string phoneno, Address address) :base(name, email, phoneno, address)
+        {
+            this.studentID = studentID;
+            this.program = program;
+            this.dateRegistered = date;
+            this.enrollment = enrollment;
+        }
+        
+        //ID only
+        /// <summary>
+        /// ID only constructor for student class
+        /// </summary>
+        /// <param name="studentID"></param>
+        public Student(string studentID) : this(studentID, DEF_PROGRAM, DEF_DATE_REG, new Enrollment(), DEF_NAME, DEF_EMAIL, DEF_PHONE_NO, new Address()) { }
+        
+        //no arg 
+        /// <summary>
+        /// No arg constructor for Student class
+        /// </summary>
+        public Student() :this(DEF_ID, DEF_PROGRAM, DEF_DATE_REG, new Enrollment(), DEF_NAME, DEF_EMAIL, DEF_PHONE_NO, new Address()) { }
+        
+        //tostring
+        /// <summary>
+        /// ToString override for student class
+        /// </summary>
+        /// <returns>
+        /// Returns studentID, program, Dateregistered, enrollemnt, and inherited attributes 
+        /// from Person class name, email, and phone no
+        /// </returns>
+        public override string ToString()
+        {
+            return "studentID: " + studentID + "program: " + program + "Date Registered: " 
+                + dateRegistered + "\nEnrollemnt: " + enrollment.ToString() + "\n" +base.ToString();
+        }
+
+
+
+    }
+}
