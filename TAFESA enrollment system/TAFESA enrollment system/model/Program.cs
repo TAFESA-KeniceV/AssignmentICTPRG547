@@ -123,6 +123,36 @@ namespace TAFESA_enrollment_system
             Student stu2 = new Student("JD123456", "E5maths", "28/01/025", en2, "Jane D", "janed@email.com", "15151515", add1);
             Console.WriteLine(stu2.ToString());
 
+            //equals
+            Student stu3 = new Student("JD123456", "E5maths", "28/01/025", en2, "Jane D", "janed@email.com", "15151515", add1);
+            Console.WriteLine("\nEquals\n");
+            Console.WriteLine("Expected False: stu2.Equals(stu1)");
+            Console.WriteLine(stu2.Equals(stu1));
+            Console.WriteLine("Expected True: stu2.Equals(stu3)");
+            Console.WriteLine(stu2.Equals(stu3));
+
+            //==
+            Console.WriteLine("\n==\n");
+            Console.WriteLine("Expected False: stu2 == stu1");
+            Console.WriteLine(stu2==stu1);
+            Console.WriteLine("Expected True: stu2 == stu3");
+            Console.WriteLine(stu2 == stu3);
+
+            //!=
+            Console.WriteLine("\n!=\n");
+            Console.WriteLine("Expected True: stu2 != stu1");
+            Console.WriteLine(stu2 != stu1);
+            Console.WriteLine("Expected False: stu2 != stu3");
+            Console.WriteLine(stu2 != stu3);
+
+            //gethash
+            Console.WriteLine("\ngethash\n");
+            Console.WriteLine("stu1");
+            Console.WriteLine(stu1.GetHashCode());
+            Console.WriteLine("stu2");
+            Console.WriteLine(stu2.GetHashCode());
+            Console.WriteLine("stu3");
+            Console.WriteLine(stu3.GetHashCode());
         }
     }
 }

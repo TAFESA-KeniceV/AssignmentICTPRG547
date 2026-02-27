@@ -71,7 +71,64 @@ namespace TAFESA_enrollment_system
                 + dateRegistered + "\nEnrollemnt: " + enrollment.ToString() + "\n" +base.ToString();
         }
 
+        //equals
+        /// <summary>
+        /// equals(object) override for Student that checks object type is student and 
+        /// compares studentID
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns>
+        /// returns a bool of a comparision of studentID between objects
+        /// </returns>
+        public override bool Equals(object obj)
+        {
+            if (obj == null)
+                return false;
+            if (ReferenceEquals(obj, this))
+                return false;
+            if (obj.GetType() != this.GetType())
+                return false;
+            Student f1 = (Student)obj;
+            return f1.studentID == this.studentID;
+        }
 
+        //gethashcode
+        /// <summary>
+        /// overrides gethashcode to hash studentID
+        /// </summary>
+        /// <returns>
+        /// returned hashed studentID
+        /// </returns>
+        public override int GetHashCode()
+        {
+            return this.studentID.GetHashCode();
+        }
 
+        //== overload
+        /// <summary>
+        /// overloaded == to compare two student objects using equals method
+        /// </summary>
+        /// <param name="stu1"></param>
+        /// <param name="stu2"></param>
+        /// <returns>
+        /// returns bool from calling the equals method
+        /// </returns>
+        public static bool operator ==(Student stu1, Student stu2)
+        {
+            return object.Equals(stu1, stu2);
+        }
+        //!= overload
+        /// <summary>
+        ///  overloaded != to compare two student objects using equals method
+        /// </summary>
+        /// <param name="stu1"></param>
+        /// <param name="stu2"></param>
+        /// <returns>
+        /// returns bool from calling the not equals method
+        /// </returns>
+        public static bool operator !=(Student stu1, Student stu2)
+        {
+            return !object.Equals(stu1, stu2);
+        }
     }
 }
