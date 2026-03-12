@@ -11,17 +11,17 @@ namespace TAFESA_enrollment_system
     internal class Person
     {
         //constants
-        public const string DEF_NAME = "No name";
-        public const string DEF_EMAIL = "No email";
+        public const string DEF_NAME = "No Name";
+        public const string DEF_EMAIL = "No Email";
         public const string DEF_PHONE_NO = "No phone number";
 
         //property assessors
-        public string name { get; set; }
-        public string email { get; set; }
-        public string phoneNumber { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public string PhoneNumber { get; set; }
 
-        //address
-        public Address address { get; set; }
+        //Address
+        public Address Address { get; set; }
 
 
         //constrcutors 
@@ -30,16 +30,16 @@ namespace TAFESA_enrollment_system
         /// <summary>
         /// All arg constructor for Persons class
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="email"></param>
-        /// <param name="phoneNumber"></param>
-        /// <param name="address"></param>
+        /// <param Name="name"></param>
+        /// <param Name="Email"></param>
+        /// <param Name="PhoneNumber"></param>
+        /// <param Name="Address"></param>
         public Person(string name, string email, string phoneNumber, Address address)
         {
-            this.name = name;
-            this.email = email;
-            this.phoneNumber = phoneNumber;
-            this.address = address;
+            this.Name = name;
+            this.Email = email;
+            this.PhoneNumber = phoneNumber;
+            this.Address = address;
         }
 
         //no arg
@@ -53,11 +53,11 @@ namespace TAFESA_enrollment_system
         /// tostring override for persons class
         /// </summary>
         /// <returns>
-        /// returns name, email, and phoneNumber
+        /// returns Name, Email, and PhoneNumber
         /// </returns>
         public override string ToString()
         {
-            return "name: " + name + ", email: " + email + ", Phone Number: " + phoneNumber + "\nAddress: " + address.ToString();
+            return "Name: " + Name + ", Email: " + Email + ", Phone Number: " + PhoneNumber + "\nAddress: " + Address.ToString();
         }
     }
 }

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("TAFESA enrollment system")]
+[assembly: AssemblyTitle("TAFESA Enrollment system")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("TAFE SA")]
-[assembly: AssemblyProduct("TAFESA enrollment system")]
+[assembly: AssemblyProduct("TAFESA Enrollment system")]
 [assembly: AssemblyCopyright("Copyright © TAFE SA 2026")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

@@ -10,17 +10,17 @@ namespace TAFESA_enrollment_system.model
     {
         //string for 13a and 13b on Something Street
         const string DEF_STREET_NUM = "No street number";
-        const string DEF_STREET_NAME = "No street name";
-        const string DEF_SUBURB = "No suburb";
+        const string DEF_STREET_NAME = "No street Name";
+        const string DEF_SUBURB = "No Suburb";
         const int DEF_POSTCODE = -1;
-        const string DEF_STATE = "No state";
+        const string DEF_STATE = "No State";
 
         //property assessor 
-        public string streetNumber {  get; set; }
-        public string streetName { get; set; }
-        public string suburb {  get; set; }
-        public int postcode { get; set; }
-        public string state { get; set; }
+        public string StreetNumber {  get; set; }
+        public string StreetName { get; set; }
+        public string Suburb {  get; set; }
+        public int Postcode { get; set; }
+        public string State { get; set; }
 
 
 
@@ -30,18 +30,18 @@ namespace TAFESA_enrollment_system.model
         /// <summary>
         /// all arg constructor for Address class
         /// </summary>
-        /// <param name="streetNum"></param>
-        /// <param name="streetName"></param>
-        /// <param name="suburb"></param>
-        /// <param name="postcode"></param>
-        /// <param name="state"></param>
+        /// <param Name="streetNum"></param>
+        /// <param Name="streetName"></param>
+        /// <param Name="suburb"></param>
+        /// <param Name="postcode"></param>
+        /// <param Name="state"></param>
         public Address(string streetNum, string streetName, string suburb, int postcode,  string state)
         {
-            this.streetNumber = streetNum;
-            this.streetName = streetName;
-            this.suburb = suburb;
-            this.postcode = postcode;
-            this.state = state;
+            this.StreetNumber = streetNum;
+            this.StreetName = streetName;
+            this.Suburb = suburb;
+            this.Postcode = postcode;
+            this.State = state;
         }
 
         //no arg
@@ -55,12 +55,12 @@ namespace TAFESA_enrollment_system.model
         /// tostring override for Address class
         /// </summary>
         /// <returns>
-        /// returns street number, streetname, postcode, and state
+        /// returns street number, streetname, Postcode, and State
         /// </returns>
         public override string ToString()
         {
-            return "Street Number: " + streetNumber + ", Street Name: " + streetName + ", Suburb: " + suburb 
-                + ", Postcode: " + postcode + ", State: " + state;
+            return "Street Number: " + StreetNumber + ", Street Name: " + StreetName + ", Suburb: " + Suburb 
+                + ", Postcode: " + Postcode + ", State: " + State;
         }
     }
 }

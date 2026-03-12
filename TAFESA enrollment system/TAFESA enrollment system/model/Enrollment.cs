@@ -10,33 +10,33 @@ namespace TAFESA_enrollment_system.model
     {
         //constants
         const string DEF_DATE_ENROLLED = "No date";
-        const string DEF_GRADE = "No grade";
+        const string DEF_GRADE = "No Grade";
         const int DEF_SEMESTER = 0;
 
         //property assessor methods
-        public string dateEnrolled {  get; set; }
-        public string grade { get; set; }
-        public int semester { get; set; }
+        public string DateEnrolled {  get; set; }
+        public string Grade { get; set; }
+        public int Semester { get; set; }
 
-        //private Subject subject;
-        public Subject subject { get; set; }
+        //private Subject Subject;
+        public Subject Subject { get; set; }
 
         //constrcutors
 
         //all arg
         /// <summary>
-        /// all arg constrcutor for enrollment
+        /// all arg constrcutor for Enrollment
         /// </summary>
-        /// <param name="dateEnrolled"></param>
-        /// <param name="grade"></param>
-        /// <param name="semester"></param>
-        /// <param name="subject"></param>
+        /// <param Name="dateEnrolled"></param>
+        /// <param Name="grade"></param>
+        /// <param Name="semester"></param>
+        /// <param Name="subject"></param>
         public Enrollment(string dateEnrolled, string grade, int semester, Subject subject)
         {
-            this.dateEnrolled = dateEnrolled;
-            this.grade = grade;
-            this.semester = semester;
-            this.subject = subject;
+            this.DateEnrolled = dateEnrolled;
+            this.Grade = grade;
+            this.Semester = semester;
+            this.Subject = subject;
         }
 
         //no arg
@@ -47,16 +47,16 @@ namespace TAFESA_enrollment_system.model
 
         //tostring
         /// <summary>
-        /// tostring override for enrollment
+        /// tostring override for Enrollment
         /// </summary>
         /// <returns>
-        /// retruns dateEnrolled, grade, semester, and subject information; 
-        /// subjectCode, subjectName, and cost
+        /// retruns DateEnrolled, Grade, Semester, and Subject information; 
+        /// SubjectCode, SubjectName, and Cost
         /// </returns>
         public override string ToString()
         {
-            return "Date Enrolled: " + dateEnrolled + ", Grade: " + grade + ", Semester: " 
-                + semester + "\nSubject: " + subject.ToString();
+            return "Date Enrolled: " + DateEnrolled + ", Grade: " + Grade + ", Semester: " 
+                + Semester + "\nSubject: " + Subject.ToString();
         }
     }
 }

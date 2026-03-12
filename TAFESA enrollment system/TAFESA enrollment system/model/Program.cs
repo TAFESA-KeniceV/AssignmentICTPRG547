@@ -11,24 +11,24 @@ namespace TAFESA_enrollment_system
     {
         static void Main(string[] args)
         {
-            //address
+            //Address
 
             Console.WriteLine("\nAddress\n");
             //no arg
             Address add1 = new Address();
             Console.WriteLine(add1.ToString());
             //setting
-            add1.streetNumber = "221b";
-            add1.streetName = "Baker St";
-            add1.suburb = "Frakenshire";
-            add1.postcode = 1111;
-            add1.state = "UK";
+            add1.StreetNumber = "221b";
+            add1.StreetName = "Baker St";
+            add1.Suburb = "Frakenshire";
+            add1.Postcode = 1111;
+            add1.State = "UK";
             //getting
-            Console.WriteLine(add1.streetNumber);
-            Console.WriteLine(add1.streetName);
-            Console.WriteLine(add1.suburb);
-            Console.WriteLine(add1.postcode);
-            Console.WriteLine(add1.state);
+            Console.WriteLine(add1.StreetNumber);
+            Console.WriteLine(add1.StreetName);
+            Console.WriteLine(add1.Suburb);
+            Console.WriteLine(add1.Postcode);
+            Console.WriteLine(add1.State);
             //all arg
 
             Address add2 = new Address("27", "Fletching St", "Bayswater", 2222, "Texas");
@@ -42,34 +42,34 @@ namespace TAFESA_enrollment_system
             Person per1 = new Person();
             Console.WriteLine(per1.ToString());
             //setters
-            per1.name = "John E";
-            per1.email = "john@email.com";
-            per1.phoneNumber = "1234567890";
-            per1.address = add1;
+            per1.Name = "John E";
+            per1.Email = "john@Email.com";
+            per1.PhoneNumber = "1234567890";
+            per1.Address = add1;
             //getters
-            Console.WriteLine(per1.name);
-            Console.WriteLine(per1.email);
-            Console.WriteLine(per1.phoneNumber);
-            Console.WriteLine(per1.address);
+            Console.WriteLine(per1.Name);
+            Console.WriteLine(per1.Email);
+            Console.WriteLine(per1.PhoneNumber);
+            Console.WriteLine(per1.Address);
             //all arg
-            Person per2 = new Person("Bill B", "billb@email.com", "111111111", add1);
+            Person per2 = new Person("Bill B", "billb@Email.com", "111111111", add1);
             Console.WriteLine(per2.ToString());
 
 
-            //subject
+            //Subject
 
             Console.WriteLine("\nSubject\n");
             //no arg
             Subject sub1 = new Subject();
             Console.WriteLine(sub1.ToString());
             //setter
-            sub1.subjectCode = "ENG348LNP";
-            sub1.subjectName = "English2";
-            sub1.cost = 240.00;
+            sub1.SubjectCode = "ENG348LNP";
+            sub1.SubjectName = "English2";
+            sub1.Cost = 240.00;
             //getter
-            Console.WriteLine(sub1.subjectCode);
-            Console.WriteLine(sub1.subjectName);
-            Console.WriteLine(sub1.cost);
+            Console.WriteLine(sub1.SubjectCode);
+            Console.WriteLine(sub1.SubjectName);
+            Console.WriteLine(sub1.Cost);
             //all arg
             Subject sub2 = new Subject("MTHS487PN", "Maths1", 360.00);
             Console.WriteLine(sub2.ToString());
@@ -82,13 +82,13 @@ namespace TAFESA_enrollment_system
             Enrollment en1 = new Enrollment();
             Console.WriteLine(en1.ToString());
             //setters
-            en1.dateEnrolled = "21/02/25";
-            en1.grade = "C";
-            en1.semester = 2;
+            en1.DateEnrolled = "21/02/25";
+            en1.Grade = "C";
+            en1.Semester = 2;
             //getters
-            Console.WriteLine(en1.dateEnrolled);
-            Console.WriteLine(en1.grade);
-            Console.WriteLine(en1.semester);
+            Console.WriteLine(en1.DateEnrolled);
+            Console.WriteLine(en1.Grade);
+            Console.WriteLine(en1.Semester);
             //all arg
             Enrollment en2 = new Enrollment("28.03.24", "B", 1, sub1);
             Console.WriteLine(en2.ToString());
@@ -101,30 +101,30 @@ namespace TAFESA_enrollment_system
             Student stu1 = new Student();
             Console.WriteLine(stu1.ToString());
             //setters
-            stu1.studentID = "AA127845";
-            stu1.program = "2E-English";
-            stu1.dateRegistered = "02/02/25";
-            stu1.enrollment = en1;
-            stu1.address = add2;
-            stu1.name = "Adam A";
-            stu1.email = "aa@amail.com";
-            stu1.phoneNumber = "1212121212";
+            stu1.StudentID = "AA127845";
+            stu1.Program = "2E-English";
+            stu1.DateRegistered = "02/02/25";
+            stu1.Enrollment = en1;
+            stu1.Address = add2;
+            stu1.Name = "Adam A";
+            stu1.Email = "aa@amail.com";
+            stu1.PhoneNumber = "1212121212";
             //getters
-            Console.WriteLine(stu1.studentID);
-            Console.WriteLine(stu1.program);
-            Console.WriteLine(stu1.dateRegistered);
-            Console.WriteLine(stu1.enrollment);
-            Console.WriteLine(stu1.address);
-            Console.WriteLine(stu1.name);
-            Console.WriteLine(stu1.email);
-            Console.WriteLine(stu1.phoneNumber);
+            Console.WriteLine(stu1.StudentID);
+            Console.WriteLine(stu1.Program);
+            Console.WriteLine(stu1.DateRegistered);
+            Console.WriteLine(stu1.Enrollment);
+            Console.WriteLine(stu1.Address);
+            Console.WriteLine(stu1.Name);
+            Console.WriteLine(stu1.Email);
+            Console.WriteLine(stu1.PhoneNumber);
             
             //all arg
-            Student stu2 = new Student("JD123456", "E5maths", "28/01/025", en2, "Jane D", "janed@email.com", "15151515", add1);
+            Student stu2 = new Student("JD123456", "E5maths", "28/01/025", en2, "Jane D", "janed@Email.com", "15151515", add1);
             Console.WriteLine(stu2.ToString());
 
             //equals
-            Student stu3 = new Student("JD123456", "E5maths", "28/01/025", en2, "Jane D", "janed@email.com", "15151515", add1);
+            Student stu3 = new Student("JD123456", "E5maths", "28/01/025", en2, "Jane D", "janed@Email.com", "15151515", add1);
             Console.WriteLine("\nEquals\n");
             Console.WriteLine("Expected False: stu2.Equals(stu1)");
             Console.WriteLine(stu2.Equals(stu1));

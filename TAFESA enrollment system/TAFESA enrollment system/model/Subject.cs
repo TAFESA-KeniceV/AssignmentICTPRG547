@@ -10,13 +10,13 @@ namespace TAFESA_enrollment_system.model
     {
         //constants
         const string DEF_SUBJECT_CODE = "No code";
-        const string DEF_SUBJECT_NAME = "No name";
+        const string DEF_SUBJECT_NAME = "No Name";
         const double DEF_COST = -1.0;
 
         //property assesor methods
-        public string subjectCode {  get; set; }
-        public string subjectName { get; set; }
-        public double cost { get; set; }
+        public string SubjectCode {  get; set; }
+        public string SubjectName { get; set; }
+        public double Cost { get; set; }
 
         //constructors
 
@@ -24,14 +24,14 @@ namespace TAFESA_enrollment_system.model
         /// <summary>
         /// all arg constrcutor for Subject
         /// </summary>
-        /// <param name="subjectCode"></param>
-        /// <param name="subjectName"></param>
-        /// <param name="cost"></param>
+        /// <param Name="SubjectCode"></param>
+        /// <param Name="SubjectName"></param>
+        /// <param Name="Cost"></param>
         public Subject(string subjectCode, string subjectName, double cost)
         {
-            this.subjectCode = subjectCode;
-            this.subjectName = subjectName;
-            this.cost = cost;
+            this.SubjectCode = subjectCode;
+            this.SubjectName = subjectName;
+            this.Cost = cost;
         }
 
         //no arg
@@ -45,11 +45,11 @@ namespace TAFESA_enrollment_system.model
         /// tostring override for Subject
         /// </summary>
         /// <returns>
-        /// returns subjectCode, subjectName, and cost
+        /// returns SubjectCode, SubjectName, and Cost
         /// </returns>
         public override string ToString()
         {
-            return "Subject Code: " + subjectCode + ", Subject Name: "+ subjectName + ", Cost: " + cost;
+            return "Subject Code: " + SubjectCode + ", Subject Name: "+ SubjectName + ", Cost: " + Cost;
         }
     }
 }
