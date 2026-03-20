@@ -110,6 +110,76 @@ namespace TAFESA_enrollment_system.model
             //not found
             return -1;
         }
+        /// <summary>
+        /// for the number of objects in the array and for each object in the array, each object
+        /// is compared to the one with the next highest index where if higher they are swapped.
+        /// the swapped bool tracks if it goes through a full run without swapping, meaning it 
+        /// is sorted and the overaching for loop to itterate through runs for every intance of 
+        /// object in the array can be broken, leading to a quicker sorting time.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="array">
+        /// returns an array sorted in oder from lowest to highest
+        /// </param>
+        private static void BubbleSortAscd<T>(T[] array) where T : IComparable<T>
+        {
+            T temp;
+            for (int j = 0; j < array.Length - 1; j++)
+            {
+                bool swapped = false;
+                for (int i = 0; i < array.Length - 1; i++)
+                {
+                    if (array[i].CompareTo(array[i + 1]) > 0)
+                    {
+                        temp = array[i + 1];
+                        array[i + 1] = array[i];
+                        array[i] = temp;
+                        swapped = true;
+                    }
+                }
+                //if it goes through a full run and nothing is swapped it must be sorted
+                //so the loop can be broken
+                if (swapped == false)
+                {
+                    break;
+                }
+            }
+        }
+        /// <summary>
+        /// for the number of objects in the array and for each object in the array, each object
+        /// is compared to the one with the next highest index where if lower they are swapped.
+        /// the swapped bool tracks if it goes through a full run without swapping, meaning it 
+        /// is sorted and the overaching for loop to itterate through runs for every intance of 
+        /// object in the array can be broken, leading to a quicker sorting time.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="array">
+        /// returns an array sorted from highest to lowest
+        /// </param>
+        private static void BubbleSortDesd<T>(T[] array) where T : IComparable<T>
+        {
+            T temp;
+            for (int j = 0; j < array.Length - 1; j++)
+            {
+                bool swapped = false;
+                for (int i = 0; i < array.Length - 1; i++)
+                {
+                    if (array[i].CompareTo(array[i + 1]) < 0)
+                    {
+                        temp = array[i + 1];
+                        array[i + 1] = array[i];
+                        array[i] = temp;
+                        swapped = true;
+                    }
+                }
+                //if it goes through a full run and nothing is swapped it must be sorted
+                //so the loop can be broken
+                if (swapped == false)
+                {
+                    break;
+                }
+            }
+        }
 
     }
 }
