@@ -84,20 +84,20 @@ namespace TestProjectSearchSort
         }
 
         [Test]
-        public void Test5BubbleSortAscdFail()
+        public void Test6BubbleSortAscdFail()
         {
 
             Student[] testArray = {
-            new Student("10001"),
-            new Student("10002"),
-            new Student("10007"),
-            new Student("10008"),
-            new Student("10003"),
-            new Student("10004"),
-            new Student("10005"),
-            new Student("10006"),
+            new Student("10010"),
             new Student("10009"),
-            new Student("10010")
+            new Student("10008"),
+            new Student("10007"),
+            new Student("10006"),
+            new Student("10005"),
+            new Student("10004"),
+            new Student("10003"),
+            new Student("10002"),
+            new Student("10001")
             };
             Utility.BubbleSortAscd<Student>(studentArray);
 
@@ -105,7 +105,7 @@ namespace TestProjectSearchSort
         }
 
         [Test]
-        public void Test5BubbleSortDesdPass()
+        public void Test7BubbleSortDesdPass()
         {
 
             Student[] testArray = {
@@ -126,21 +126,20 @@ namespace TestProjectSearchSort
         }
 
         [Test]
-        public void Test5BubbleSortDesdFail()
+        public void Test8BubbleSortDesdFail()
         {
 
             Student[] testArray = {
-            new Student("10010"),
-            new Student("10009"),
-            new Student("10004"),
-            new Student("10003"),
-            new Student("10002"),
             new Student("10001"),
-            new Student("10008"),
-            new Student("10007"),
+            new Student("10002"),
+            new Student("10003"),
+            new Student("10004"),
+            new Student("10005"),
             new Student("10006"),
-            new Student("10005")
-
+            new Student("10007"),
+            new Student("10008"),
+            new Student("10009"),
+            new Student("10010")
             };
             Utility.BubbleSortDesd<Student>(studentArray);
 
