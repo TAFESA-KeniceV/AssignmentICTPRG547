@@ -7,7 +7,7 @@ using TAFESA_enrollment_system.model;
 
 namespace TAFESA_enrollment_system
 {
-    internal class Student : Person, IComparable, IComparable<Student>
+    public class Student : Person, IComparable, IComparable<Student>
     {
         //constants
         const string DEF_ID = "0";

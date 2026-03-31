@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TAFESA_enrollment_system.model
 {
-    internal class Subject
+    public class Subject
     {
         //constants
         const string DEF_SUBJECT_CODE = "No code";

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TAFESA_enrollment_system.model
 {
-    internal class Address
+    public class Address
     {
         //string for 13a and 13b on Something Street
         const string DEF_STREET_NUM = "No street number";

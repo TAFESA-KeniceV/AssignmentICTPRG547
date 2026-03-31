@@ -8,7 +8,7 @@ using TAFESA_enrollment_system.model;
 
 namespace TAFESA_enrollment_system
 {
-    internal class Person
+    public class Person
     {
         //constants
         public const string DEF_NAME = "No Name";

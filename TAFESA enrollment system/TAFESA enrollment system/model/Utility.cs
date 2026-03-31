@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace TAFESA_enrollment_system.model
 {
-    internal class Utility
+    public class Utility
     {
         /// <summary>
         /// Uses while loop to increment the index of the input array using i. While the target is 
         /// not found and while within the array length the loop will continue.
         /// Then if the target value returns true when using the compareTo method then 
         /// found is set to true and the loop is broken, else i is incremented by 1.
-        /// then if i is in the array length it returns i, being the index of the target,
+        /// then if i is in the array length it returns i, being the index of the search target,
         /// else it returns -1
         /// 
         /// pseudocode
@@ -60,7 +60,7 @@ namespace TAFESA_enrollment_system.model
                 return -1;
         }
         /// <summary>
-        /// binaray search assigns the middle value of the sorted array to mid in a dowhile with
+        /// binaray search assigns the middle value of the sorted array to mid in a do-while with
         /// an if the middle compares to the target, it returns the current mid value; an if the
         /// target is greater than the mid, it sets the min to the mid+1; and else it sets the
         /// max to mid-1. the continues while min is less than or equal to max, where it will 
@@ -121,7 +121,7 @@ namespace TAFESA_enrollment_system.model
         /// <param name="array">
         /// returns an array sorted in oder from lowest to highest
         /// </param>
-        private static void BubbleSortAscd<T>(T[] array) where T : IComparable<T>
+        public static void BubbleSortAscd<T>(T[] array) where T : IComparable<T>
         {
             T temp;
             for (int j = 0; j < array.Length - 1; j++)
@@ -156,7 +156,7 @@ namespace TAFESA_enrollment_system.model
         /// <param name="array">
         /// returns an array sorted from highest to lowest
         /// </param>
-        private static void BubbleSortDesd<T>(T[] array) where T : IComparable<T>
+        public static void BubbleSortDesd<T>(T[] array) where T : IComparable<T>
         {
             T temp;
             for (int j = 0; j < array.Length - 1; j++)

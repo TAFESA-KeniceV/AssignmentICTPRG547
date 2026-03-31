@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="TAFESA enrollment system/TAFESA enrollment system.csproj" Id="70f2ce15-cf21-4366-a294-fe1620d81bbb" />
+  <Project Path="TestProjectSearchSort/TestProjectSearchSort.csproj" Id="1747e749-0e95-4402-9e4a-06078f1f91b3" />
 </Solution>

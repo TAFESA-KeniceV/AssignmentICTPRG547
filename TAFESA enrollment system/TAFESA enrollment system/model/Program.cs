@@ -99,6 +99,7 @@ namespace TAFESA_enrollment_system
             Console.WriteLine("\nStudent\n");
             //no arg
             Student stu1 = new Student();
+            
             Console.WriteLine(stu1.ToString());
             //setters
             stu1.StudentID = "AA127845";
@@ -154,5 +155,6 @@ namespace TAFESA_enrollment_system
             Console.WriteLine("stu3");
             Console.WriteLine(stu3.GetHashCode());
         }
+        
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TAFESA_enrollment_system.model
 {
-    internal class Enrollment
+    public class Enrollment
     {
         //constants
         const string DEF_DATE_ENROLLED = "No date";
