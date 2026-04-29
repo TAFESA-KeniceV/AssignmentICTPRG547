@@ -48,6 +48,8 @@
     <Compile Include="model\Enrollment.cs" />
     <Compile Include="model\Person.cs" />
     <Compile Include="model\Program.cs" />
+    <Compile Include="model\SinglyLinkedList.cs" />
+    <Compile Include="model\SinglyLinkedListNode.cs" />
     <Compile Include="model\Subject.cs" />
     <Compile Include="model\Utility.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

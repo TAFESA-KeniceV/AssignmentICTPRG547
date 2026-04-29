@@ -170,7 +170,10 @@ namespace TAFESA_enrollment_system
         /// </returns>
         public static bool operator <(Student stu1, Student stu2)
         {
-            return stu1.GetHashCode() < stu2.GetHashCode();
+            if (stu1.CompareTo(stu2) < 0)
+                return true;
+            else
+                return false;
         }
         /// <summary>
         /// uses gethashcode to see if stu1 is greater than stu2
@@ -182,7 +185,10 @@ namespace TAFESA_enrollment_system
         /// </returns>
         public static bool operator >(Student stu1, Student stu2)
         {
-            return stu1.GetHashCode() > stu2.GetHashCode();
+            if (stu1.CompareTo(stu2) > 0)
+                return true;
+            else
+                return false;
         }
         /// <summary>
         /// uses gethashcode to see if stu1 is less or equal to than stu2
@@ -194,7 +200,10 @@ namespace TAFESA_enrollment_system
         /// </returns>
         public static bool operator <=(Student stu1, Student stu2)
         {
-            return stu1.GetHashCode() <= stu2.GetHashCode();
+            if (stu1.CompareTo(stu2) <= 0)
+                return true;
+            else
+                return false;
         }
         /// <summary>
         /// uses gethashcode to see if stu1 is greater than or equal to than stu2
@@ -206,7 +215,10 @@ namespace TAFESA_enrollment_system
         /// </returns>
         public static bool operator >=(Student stu1, Student stu2)
         {
-            return stu1.GetHashCode() >= stu2.GetHashCode();
+            if (stu1.CompareTo(stu2) >= 0)
+                return true;
+            else
+                return false;
         }
     }
 }
