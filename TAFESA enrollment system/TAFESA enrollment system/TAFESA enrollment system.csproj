@@ -45,6 +45,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="model\Address.cs" />
+    <Compile Include="model\BinarySearchNode.cs" />
+    <Compile Include="model\BinarySearchTree.cs" />
+    <Compile Include="model\DoublyLinkedList.cs" />
+    <Compile Include="model\DoublyLinkedListNode.cs" />
     <Compile Include="model\Enrollment.cs" />
     <Compile Include="model\Person.cs" />
     <Compile Include="model\Program.cs" />

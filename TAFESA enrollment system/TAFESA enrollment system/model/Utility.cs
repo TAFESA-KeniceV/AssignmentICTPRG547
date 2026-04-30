@@ -45,19 +45,26 @@ namespace TAFESA_enrollment_system.model
         /// </returns>
         public static int LinearSearchArray<T>(T[] array, T target) where T : IComparable<T>
         {
-            int i = 0;
-            bool found = false;
-            while (!found && i < array.Length)
+            try
             {
-                if (target.CompareTo(array[i]) == 0)
-                    found = true;
+                int i = 0;
+                bool found = false;
+                while (!found && i < array.Length)
+                {
+                    if (target.CompareTo(array[i]) == 0)
+                        found = true;
+                    else
+                        i++;
+                }
+                if (i < array.Length)
+                    return i;
                 else
-                    i++;
+                    return -1;
             }
-            if (i < array.Length)
-                return i;
-            else
-                return -1;
+            catch (NullReferenceException ex)
+            {
+                throw new ArgumentNullException("Array and Target cannot be null", ex);
+            }
         }
         /// <summary>
         /// binaray search assigns the middle value of the sorted array to mid in a do-while with
@@ -88,27 +95,33 @@ namespace TAFESA_enrollment_system.model
         /// <returns></returns>
         public static int BinarySearch<T>(T[] array, T target) where T : IComparable<T>
         {
-            int min = 0;
-            int max = array.Length - 1;
-            int mid;
-            do
+            try
             {
-                //assign mid to middle number
-                mid = (min + max) / 2;
-                //if found
-                if (target.CompareTo(array[mid]) == 0)
-                    return mid;
-                //if search target is higher than mid
-                if (target.CompareTo(array[mid]) > 0)
-                    min = mid + 1;
-                //if search target is lower than mid
-                else
-                    max = mid - 1;
-                //while min and max are lower and higher
-            } while (min <= max);
+                int min = 0;
+                int max = array.Length - 1;
+                int mid;
+                do
+                {
+                    //assign mid to middle number
+                    mid = (min + max) / 2;
+                    //if found
+                    if (target.CompareTo(array[mid]) == 0)
+                        return mid;
+                    //if search target is higher than mid
+                    if (target.CompareTo(array[mid]) > 0)
+                        min = mid + 1;
+                    //if search target is lower than mid
+                    else
+                        max = mid - 1;
+                    //while min and max are lower and higher
+                } while (min <= max);
 
-            //not found
-            return -1;
+                //not found
+                return -1;
+            }
+            catch(NullReferenceException ex) {
+                throw new ArgumentNullException("Array and Target cannot be null", ex);
+            }
         }
         /// <summary>
         /// for the number of objects in the array and for each object in the array, each object

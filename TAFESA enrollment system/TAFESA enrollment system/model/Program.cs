@@ -154,7 +154,35 @@ namespace TAFESA_enrollment_system
             Console.WriteLine(stu2.GetHashCode());
             Console.WriteLine("stu3");
             Console.WriteLine(stu3.GetHashCode());
+
+
+
+
+            //binaru tets
+            BinarySearchTree<String> tree = new BinarySearchTree<String>();
+
+            tree.Add("10004");
+            tree.Add("10002");
+            tree.Add("10006");
+            tree.Add("10001");
+            tree.Add("10005");
+            tree.Add("10003");
+            tree.Add("10007");
+            SinglyLinkedList<String> test = tree.TraversePreOrder(tree.Root);
+            Console.WriteLine(DisplaySinglyList(test));
+
+
         }
-        
+        static String DisplaySinglyList(SinglyLinkedList<String> singlyLinkedList)
+        {
+            String list = "";
+            foreach (String item in singlyLinkedList)
+            {
+                list = list  + item + " ";
+            }
+            return list;
+
+        }
+
     }
 }
